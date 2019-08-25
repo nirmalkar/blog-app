@@ -14,11 +14,6 @@ export default new Router({
       component: BlogList
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
-    },
-    {
       path: '/new',
       name: 'create',
       component: () => import('./views/BlogForm.vue')

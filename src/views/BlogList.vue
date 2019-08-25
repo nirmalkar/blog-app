@@ -1,20 +1,16 @@
 <template>
-  <div class="container">
-    <h1 class="text-center">Blogs</h1>
+  <div class="container mt-5 pt-5">
     <div class="card-columns">
       <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" :deleteBlog="deleteBlog" />
     </div>
-    <div class="row">
-      <div class="col-lg-2 offset-5 py-5 my-5">
-        <BounceLoader v-if="loading" />
-      </div>
+    <div class="d-flex justify-content-center align-items-center mt-5">
+      <BounceLoader v-if="loading" />
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 import BounceLoader from "vue-spinner/src/BounceLoader.vue";
 
 import BlogItem from "@/components/BlogItem";
@@ -29,7 +25,6 @@ export default {
   },
   components: {
     BlogItem,
-    PulseLoader,
     BounceLoader
   },
   created() {

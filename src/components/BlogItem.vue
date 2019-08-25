@@ -1,5 +1,5 @@
 <template>
-  <div class="card shadow">
+  <div class="card shadow border-0">
     <router-link :to="`/${blog.id}/`">
       <img class="card-img-top" :src="blog.image" :alt="blog.title" />
     </router-link>
