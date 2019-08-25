@@ -21,13 +21,14 @@ export default {
     BlogItem
   },
   created() {
-    let myUrl = "https://my-json-server.typicode.com/hemantkumar2/blog-app-db/master/posts?_limit=10"
     axios
       .get("https://jsonplaceholder.typicode.com/posts/?_limit=10")
       .then(res => {
         this.blogs = res.data;
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log(error);
+      });
   },
   methods: {
     deleteBlog(id) {
@@ -36,7 +37,9 @@ export default {
         .then(res => {
           this.blogs = this.blogs.filter(blog => blog.id !== id);
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 };

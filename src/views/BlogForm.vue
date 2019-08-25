@@ -58,7 +58,9 @@ export default {
           this.image = res.data.image;
           this.body = res.data.body;
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+          console.log(error);
+        });
     }
   },
   methods: {
@@ -74,11 +76,17 @@ export default {
       if (this.$router.history.current.params.id) {
         // Edit
         axios
-          .put(`https://jsonplaceholder.typicode.com/posts/${this.$router.history.current.params.id}`, data)
+          .put(
+            `https://jsonplaceholder.typicode.com/posts/${this.$router.history.current.params.id}`,
+            data
+          )
           .then(res => {
+            console.log(res.data)
             this.$router.push("/");
           })
-          .catch(error => console.log(error));
+          .catch(error => {
+            console.log(error);
+          });
       } else {
         // Create
         axios
@@ -86,7 +94,9 @@ export default {
           .then(res => {
             this.$router.push("/");
           })
-          .catch(error => console.log(error));
+          .catch(error => {
+            console.log(error);
+          });
       }
     }
   }
