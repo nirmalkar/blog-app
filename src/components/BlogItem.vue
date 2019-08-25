@@ -8,7 +8,7 @@
       </div>
       <div class="col-lg-2">
         <router-link :to="`/${blog.id}/edit`" class="btn btn-info mr-2">Edit</router-link>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" @click="deleteBlog(blog.id)">Delete</button>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 <script>
 export default {
   name: "BlogItem",
-  props: ["blog"]
+  props: ["blog", "deleteBlog"]
 };
 </script>
 

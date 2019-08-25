@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Blogs</h1>
-    <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" />
+    <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" :deleteBlog="deleteBlog" />
   </div>
 </template>
 
@@ -27,6 +27,16 @@ export default {
         this.blogs = res.data;
       })
       .catch(error => console.log(error));
+  },
+  methods: {
+    deleteBlog(id) {
+      axios
+        .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .then(res => {
+          this.blogs = this.blogs.filter(blog => blog.id !== id);
+        })
+        .catch(error => console.log(error));
+    }
   }
 };
 </script>
