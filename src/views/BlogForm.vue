@@ -51,7 +51,7 @@ export default {
     if (this.$router.history.current.params.id) {
       axios
         .get(
-          `https://jsonplaceholder.typicode.com/posts/${this.$router.history.current.params.id}`
+          `https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${this.$router.history.current.params.id}`
         )
         .then(res => {
           this.title = res.data.title;
@@ -77,7 +77,7 @@ export default {
         // Edit
         axios
           .put(
-            `https://jsonplaceholder.typicode.com/posts/${this.$router.history.current.params.id}`,
+            `https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${this.$router.history.current.params.id}`,
             data
           )
           .then(res => {
@@ -90,7 +90,7 @@ export default {
       } else {
         // Create
         axios
-          .post("https://jsonplaceholder.typicode.com/posts/", data)
+          .post("https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/", data)
           .then(res => {
             this.$router.push("/");
           })

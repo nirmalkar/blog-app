@@ -22,7 +22,7 @@ export default {
   created() {
     axios
       .get(
-        `https://jsonplaceholder.typicode.com/posts/${this.$router.history.current.params.id}`
+        `https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${this.$router.history.current.params.id}`
       )
       .then(res => {
         this.blog = res.data;

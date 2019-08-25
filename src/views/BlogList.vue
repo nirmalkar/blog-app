@@ -22,7 +22,7 @@ export default {
   },
   created() {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts/?_limit=10")
+      .get("https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/?_limit=10")
       .then(res => {
         this.blogs = res.data;
       })
@@ -33,7 +33,7 @@ export default {
   methods: {
     deleteBlog(id) {
       axios
-        .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .delete(`https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${id}`)
         .then(res => {
           this.blogs = this.blogs.filter(blog => blog.id !== id);
         })
