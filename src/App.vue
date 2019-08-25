@@ -22,6 +22,8 @@ body {
     rgba(220, 217, 249, 1) 0%,
     rgba(172, 224, 217, 1) 89.8%
   );
+  background-size: cover;
+  background-position: center;
   /* background-image: radial-gradient( circle farthest-corner at 18.7% 37.8%,  rgba(250,250,250,1) 0%, rgba(225,234,238,1) 90% ); */
 }
 

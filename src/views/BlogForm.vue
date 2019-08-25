@@ -27,8 +27,8 @@
             required
           ></textarea>
           <div class="text-center">
-            <router-link to="/" class="btn btn-secondary px-5 py-2 mr-3">Cancel</router-link>
-            <button class="btn btn-primary px-5 py-2">Save</button>
+            <router-link to="/" class="btn btn-secondary px-5 py-2 m-2">Cancel</router-link>
+            <button class="btn btn-primary px-5 py-2 m-2">Save</button>
           </div>
         </form>
       </div>

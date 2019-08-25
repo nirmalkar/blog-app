@@ -11,11 +11,11 @@
         class="card-text"
       >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <div class="text-right">
-        <router-link :to="`/${blog.id}/edit`" class="btn btn-info mr-2">
+        <router-link :to="`/${blog.id}/edit`" class="btn btn-secondary mr-2">
           <i class="fas fa-pencil-alt mr-1" />
           Edit
         </router-link>
-        <button class="btn btn-danger" @click="deleteBlog(blog.id)">
+        <button class="btn btn-dark" @click="deleteBlog(blog.id)">
           <i class="fas fa-trash mr-1" />
           Delete
         </button>
