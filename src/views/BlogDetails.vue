@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <div class="card">
+    <div class="card mb-5">
+      <img class="card-img-top" :src="blog.image" :alt="blog.title" />
       <div class="card-body">
-        <h3>{{blog.title}}</h3>
-        <p>{{blog.body}}</p>
+        <h3 class="card-title">{{blog.title}}</h3>
+        <p class="card-text">{{blog.body}}</p>
       </div>
     </div>
   </div>

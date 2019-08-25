@@ -4,11 +4,18 @@
     <div class="card-columns">
       <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" :deleteBlog="deleteBlog" />
     </div>
+    <div class="row">
+      <div class="col-lg-2 offset-5 py-5 my-5">
+        <BounceLoader v-if="loading" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
+import BounceLoader from "vue-spinner/src/BounceLoader.vue";
 
 import BlogItem from "@/components/BlogItem";
 
@@ -16,11 +23,14 @@ export default {
   name: "BlogList",
   data() {
     return {
-      blogs: []
+      blogs: [],
+      loading: true
     };
   },
   components: {
-    BlogItem
+    BlogItem,
+    PulseLoader,
+    BounceLoader
   },
   created() {
     axios
@@ -29,6 +39,7 @@ export default {
       )
       .then(res => {
         this.blogs = res.data;
+        this.loading = false;
       })
       .catch(error => {
         console.log(error);
