@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5 pt-5">
-    <div class="card mb-5">
+    <div class="card shadow border-0 mb-5">
       <img class="card-img-top" :src="blog.image" :alt="blog.title" />
       <div class="card-body">
         <h3 class="card-title">{{blog.title}}</h3>

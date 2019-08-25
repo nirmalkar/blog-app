@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5 pt-5">
-    <div class="card">
+    <div class="card shadow border-0">
       <div class="card-body">
         <h3 class="card-title" v-if="$router.history.current.params.id">Edit Blog</h3>
         <h3 class="card-title" v-else>Add Blog</h3>
