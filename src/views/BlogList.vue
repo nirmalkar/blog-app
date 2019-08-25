@@ -21,6 +21,7 @@ export default {
     BlogItem
   },
   created() {
+    let myUrl = "https://my-json-server.typicode.com/hemantkumar2/blog-app-db/master/posts?_limit=10"
     axios
       .get("https://jsonplaceholder.typicode.com/posts/?_limit=10")
       .then(res => {
