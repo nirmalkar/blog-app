@@ -9,7 +9,7 @@
       </router-link>
       <p
         class="card-text"
-      >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      >{{blog.body}}</p>
       <div class="text-right">
         <router-link :to="`/${blog.id}/edit`" class="btn btn-secondary mr-2">
           <i class="fas fa-pencil-alt mr-1" />
