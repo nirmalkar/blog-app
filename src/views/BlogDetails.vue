@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-5 pt-5">
     <div class="card mb-5">
       <img class="card-img-top" :src="blog.image" :alt="blog.title" />
       <div class="card-body">
