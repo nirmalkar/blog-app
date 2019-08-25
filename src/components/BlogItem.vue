@@ -8,16 +8,18 @@
         <h5 class="card-title">{{blog.title}}</h5>
       </router-link>
       <p
-        class="card-text text-dark"
+        class="card-text"
       >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <router-link :to="`/${blog.id}/edit`" class="btn btn-info mr-2">
-        <i class="fas fa-pencil-alt mr-1" />
-        Edit
-      </router-link>
-      <button class="btn btn-danger" @click="deleteBlog(blog.id)">
-        <i class="fas fa-trash mr-1" />
-        Delete
-      </button>
+      <div class="text-right">
+        <router-link :to="`/${blog.id}/edit`" class="btn btn-info mr-2">
+          <i class="fas fa-pencil-alt mr-1" />
+          Edit
+        </router-link>
+        <button class="btn btn-danger" @click="deleteBlog(blog.id)">
+          <i class="fas fa-trash mr-1" />
+          Delete
+        </button>
+      </div>
     </div>
   </div>
 </template>
