@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <h1>Blogs</h1>
-    <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" :deleteBlog="deleteBlog" />
+    <h1 class="text-center">Blogs</h1>
+    <div class="card-columns">
+      <BlogItem v-for="blog in blogs" :key="blog.id" :blog="blog" :deleteBlog="deleteBlog" />
+    </div>
   </div>
 </template>
 
@@ -22,7 +24,9 @@ export default {
   },
   created() {
     axios
-      .get("https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/?_limit=10")
+      .get(
+        "https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/?_limit=10"
+      )
       .then(res => {
         this.blogs = res.data;
       })
@@ -33,7 +37,9 @@ export default {
   methods: {
     deleteBlog(id) {
       axios
-        .delete(`https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${id}`)
+        .delete(
+          `https://my-json-server.typicode.com/hemantkumar2/blog-app-db/posts/${id}`
+        )
         .then(res => {
           this.blogs = this.blogs.filter(blog => blog.id !== id);
         })
