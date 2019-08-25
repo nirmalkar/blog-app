@@ -1,5 +1,7 @@
 <template>
-  <div class="about">
-    <h1>A Blog app built with Vue.js</h1>
+  <div class="container">
+    <h2>About</h2>
+    <hr>
+    <p>A Blog app built with Vue.js</p>
   </div>
 </template>

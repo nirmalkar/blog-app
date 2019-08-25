@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import BlogList from './views/BlogList.vue'
 
 Vue.use(Router)
 
@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: BlogList
     },
     {
       path: '/about',
@@ -19,23 +19,18 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
-      path: '/blogs',
-      name: 'about',
-      component: () => import('./views/BlogList.vue')
-    },
-    {
-      path: '/blogs/new',
-      name: 'about',
+      path: '/new',
+      name: 'create',
       component: () => import('./views/BlogForm.vue')
     },
     {
-      path: '/blogs/:id',
-      name: 'about',
+      path: '/:id',
+      name: 'details',
       component: () => import('./views/BlogDetails.vue')
     },
     {
-      path: '/blogs/:id/edit',
-      name: 'about',
+      path: '/:id/edit',
+      name: 'update',
       component: () => import('./views/BlogForm.vue')
     },
   ]
